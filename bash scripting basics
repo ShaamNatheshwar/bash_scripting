@@ -69,6 +69,7 @@ count=20
 fi
 
 12. and
+if we are using traditional symbols then we have to use two square brackets else if we use jst wordings simply we can give one bracket
 count=20
  if [ $count -lt 20 ] && [ $count -gt 30 ]
  then
@@ -93,4 +94,102 @@ then
      echo "The value is not 20"
 fi
 
-13. 
+13. or statement
+same rules apply for or statement
+count=20
+if [ $count -gt 10 -o $count -lt 20 ]
+then
+     echo "The value is 20"
+ else
+     echo "The value is not 20"
+fi
+
+14. While loop
+count=0
+while [ $count -lt 10 ]
+do 
+    echo "$count"
+    count=$((count+1))
+done
+
+15. until loop
+count=0
+while [ $count -gt 10 ]
+do 
+    echo "$count"
+    count=$((count+1))
+done
+
+
+16. for loop
+for i in 1 2 3 4 5
+do
+   echo "$i"
+done 
+
+or
+
+for i in {0..19}
+do
+   echo "$i"
+done 
+
+or
+
+17. break and continue
+
+for (( i=0; i<=10; i++ ))
+do
+   if [ $i -eq 5 ]
+   break and continue
+   echo "$i"
+done
+
+
+18. simple user input
+echo $1 $2 $3
+if we inclue $0 we will be getting file name tooo
+
+19. how to take multiple user input
+
+args=('$@')
+echo ${args[1]}
+
+or
+echo "$@" - prints all the input
+echo "$#" - prints the lengths of the arrays
+
+if we want to give document name with spaces 
+document\ title1\
+
+20. how to read input but through another file
+while read line
+do 
+    echo $line
+done > "${1:-/dev/stdin}"
+
+21. for sending output and error respectively
+ls -al 1> stdout.txt 2>stderr.txt
+
+1 for output and 2 for error
+ls -al >& fileoutput.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
