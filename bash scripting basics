@@ -1,0 +1,96 @@
+1. how to showcase the shells we have
+cat /etc/shells
+
+2. how to know the path of bash
+which bash
+
+3. how to create an shell script
+touch helloscript.sh
+
+4. give the shebang line for it
+#! /bin/bash
+
+5. how to save our output in a file
+echo "Hello" > file.txt
+
+6. how to come out  of cat editor
+ctrl + d
+
+7. how to do single and multiple lines of commenting
+# This is a single line comment
+: ' This is multiple line comment
+This goes as follows'
+
+8. how to give comments that can be seen on the terminal
+cat << creative
+This is a comment
+That can be seen on 
+the terminal
+creative
+
+9. give an example for if statements
+ make sure that variables donot carry any spaces only the values inside square brackets does also if we are using integers they will always carry -eq , -gt like values
+ but for strings we will use the traditional ==, != so on
+
+ also for addressing the variables inside the square brackets we will use $ for variables
+
+ count=20
+ if [ $count -eq 20 ]
+ then
+     echo "The value is 20"
+fi
+
+ count=20
+ if (( $count = 20 ))
+ then
+     echo "The value is 20"
+fi
+
+
+10. else
+ count=20
+ if [ $count = 20 ]
+ then
+     echo "The value is 20"
+ else
+     echo "The value is not 20"
+fi
+
+11. elif
+count=20
+ if [ $count = 20 ]
+ then
+     echo "The value is 20"
+ elif [ $count > 20 ]
+ then 
+     echo " The value is greater than 20 "
+ else
+     echo "The value is not 20"
+fi
+
+12. and
+count=20
+ if [ $count -lt 20 ] && [ $count -gt 30 ]
+ then
+     echo "The value is 20"
+ else
+     echo "The value is not 20"
+fi
+
+or
+count=20
+if [[ $count -gt 10 && $count -lt 20 ]]
+then
+     echo "The value is 20"
+ else
+     echo "The value is not 20"
+fi
+count=20
+if [ $count -gt 10 -a $count -lt 20 ]
+then
+     echo "The value is 20"
+ else
+     echo "The value is not 20"
+fi
+
+13. 
