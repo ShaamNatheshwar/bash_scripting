@@ -175,16 +175,164 @@ ls -al 1> stdout.txt 2>stderr.txt
 ls -al >& fileoutput.txt
 
 
+22. sending scripts from one file to another
+
+MESSAGE="This is a message"
+export MESSAGE
+./ second.sh
+
+23. how to receive a user input
+echo "Enter a string"
+read st1
+
+echo "Enter a string 2"
+read st2
+if [ "$st1" == "$st2" ] 
+then 
+   echo "The values match"
+else
+   echo "The values donot match"
+fi
+
+for checking length \< for verifying the length
+for concatenation
+c=$st1$st2
+
+for convertingg into upper case
+echo ${st1^}
+echo ${st1^^}
+
+for converting into lowercase
+echo ${st1^l}
+
+
+24. how to add two variables
+
+n1=2
+n2=4
+echo $(( n1 + n2 ))
+
++,-,/,*,%
+
+these are the operations that can be performed
+
+we can restrict a variable in bash
+25. for type like behavior and and its uses attributes that can be set by a command
+
+declare -p
+to show case all the variables down there
+
+declare myvariable=22
+
+26. arrays
+car=('a' 'b' 'c')
+echo ${car[@]}
+echo ${car[1]}
+echo ${!car[1]} - shows the indexes
+echo ${#car[1]} - shows the total things
+unset car[1] - removes value from that index
+car[2]='gohan' - this adds the values to it
+
+27. functions
+
+function name()
+{
+    echo "This is a function"
+}
+name
+
+
+function with arguments
+function name()
+{
+    echo $1
+}
+name hi
+
+
+
+function name()
+{
+   value='one'
+}
+
+echo $value
+
+name
+echo $value
+
+
+28. Directories and files
+
+mkdir -p filename
+this simply overrides if there is a directory already existing
+
+echo "Enter the file name to check"
+read direct
+if [ -d $direct ]
+then
+   echo "The file exist"
+else
+   echo "The file doesnot exist"
+
+fi
+
+for filename
+if [[ -f $direct ]] 
+
+
+curl
+url='<link>'
+curl ${url} -o inherits actual file name
+-o <filename> this is the manual file name
+> <filename> this is the manual file name
+
+curl -I ${url} - This gives the header of the file that can be used in checking the file
+
+29. select from arrays
+select car in bmw benz buggati
+do
+    echo "$car"
+done
 
 
 
 
+30. using switch
+select car in shaam natheshwar s
+do
+     case $car in
+     shaam)
+       echo "This is shaam";;
+     natheshwar)
+       echo "This is natheshwar";;
+     *)
+      echo "This is default";;
+      esac
+done
 
 
 
 
+-t seconds
+
+inotify - helps in monitoring and alerting our file systems
+
+inotifywait -m /<filename> this sets up watch
 
 
+
+
+grep we already learnt it b4
+
+awk its kinda programming language helps in using variables so on
+
+its simply helps us in using the datatypes 
+
+{print}
+
+
+sed helps in performing some actions like replacement so on
 
 
 
